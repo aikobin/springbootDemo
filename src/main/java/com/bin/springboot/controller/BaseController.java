@@ -1,4 +1,4 @@
-package com.springboot.controller;
+package com.bin.springboot.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 
-import com.springboot.core.GlobalResponseCode;
-import com.springboot.core.ResBody;
+import com.bin.springboot.core.GlobalResponseCode;
+import com.bin.springboot.core.ResBody;
 
 public class BaseController {
 	public Logger log = LoggerFactory.getLogger(BaseController.class);

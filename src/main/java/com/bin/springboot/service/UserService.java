@@ -1,11 +1,11 @@
-package com.springboot.service;
+package com.bin.springboot.service;
 
 import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-import com.springboot.core.PageInfo;
-import com.springboot.dao.entity.User;
+import com.bin.springboot.core.PageInfo;
+import com.bin.springboot.dao.entity.User;
 
 public interface UserService {
 	

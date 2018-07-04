@@ -1,4 +1,4 @@
-package com.springboot.service.impl;
+package com.bin.springboot.service.impl;
 
 import java.util.List;
 
@@ -14,10 +14,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.springboot.core.PageInfo;
-import com.springboot.dao.UserDao;
-import com.springboot.dao.entity.User;
-import com.springboot.service.UserService;
+import com.bin.springboot.core.PageInfo;
+import com.bin.springboot.dao.UserDao;
+import com.bin.springboot.dao.entity.User;
+import com.bin.springboot.service.UserService;
 
 @Service
 @Transactional

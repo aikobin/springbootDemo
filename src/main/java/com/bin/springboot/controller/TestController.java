@@ -1,4 +1,4 @@
-package com.springboot.controller;
+package com.bin.springboot.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,10 +16,10 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.core.PageInfo;
-import com.springboot.core.ResBody;
-import com.springboot.dao.entity.User;
-import com.springboot.service.UserService;
+import com.bin.springboot.core.PageInfo;
+import com.bin.springboot.core.ResBody;
+import com.bin.springboot.dao.entity.User;
+import com.bin.springboot.service.UserService;
 
 @RestController
 @RequestMapping("/test")

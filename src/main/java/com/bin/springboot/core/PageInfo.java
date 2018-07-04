@@ -1,4 +1,4 @@
-package com.springboot.core;
+package com.bin.springboot.core;
 
 import javax.validation.constraints.NotNull;
 

@@ -1,4 +1,4 @@
-package com.springboot.dao.entity;
+package com.bin.springboot.dao.entity;
 
 import java.io.Serializable;
 

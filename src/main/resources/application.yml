@@ -5,7 +5,7 @@ spring:
      name: springboot-demo
    datasource:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.32.140:3306/springbootdemo?useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://192.168.32.140:3306/springbootdemo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
       username: root
       password: root
    jpa:
@@ -32,3 +32,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.32.140:8761/eureka/    # 指定注册中心的地址
+  instance:
+         preferIpAddress: true
+         instance-id: ${spring.cloud.client.ipAddress}:${server.port}
