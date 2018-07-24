@@ -28,10 +28,10 @@ spring:
        max-idle: 8
        min-idle: 0
    #  timeout: 1000
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://192.168.32.140:8761/eureka/    # 指定注册中心的地址
-  instance:
-         preferIpAddress: true
-         instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://192.168.32.140:8761/eureka/    # 指定注册中心的地址
+#  instance:
+#         preferIpAddress: true
+#         instance-id: ${spring.cloud.client.ipAddress}:${server.port}

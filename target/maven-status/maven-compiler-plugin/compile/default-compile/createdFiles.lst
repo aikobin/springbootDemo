@@ -1,0 +1,11 @@
+com\bin\springboot\dao\entity\User.class
+com\bin\springboot\controller\BaseController.class
+com\bin\springboot\controller\TestController.class
+com\bin\springboot\dao\UserDao.class
+com\bin\springboot\core\GlobalResponseCode.class
+com\bin\springboot\RunApplication.class
+com\bin\springboot\core\ResBody.class
+com\bin\springboot\service\impl\UserServiceImpl.class
+com\bin\springboot\service\UserService.class
+com\bin\springboot\core\PageInfo.class
+com\bin\springboot\config\RedisConfig.class
