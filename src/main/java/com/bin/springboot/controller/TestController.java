@@ -55,7 +55,8 @@ public class TestController extends BaseController{
 
 	@RequestMapping("/removeUser")
 	public String removeUser(User user) {
-		log.error("binerror");
+		log.info("zzpps");
+		log.error("sssqq");
 		userService.removeUser(user.getId());
 		return "success";
 	}
