@@ -1,3 +1,5 @@
+info:
+  version: @project.version@
 server:
   port: 8091
 spring:
@@ -35,3 +37,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://192.168.32.140:8761/eureka/    # 指定注册中心的地址
+management:
+  security:
+    enabled: false # spring-boot 1.5.2之后严格执行安全策略，所以需要配置这个为false ,否则很多点监控不到
+  
