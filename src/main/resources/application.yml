@@ -33,6 +33,6 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.32.140:8761/eureka/    # 指定注册中心的地址
   instance:
-       #  ip-address: 192.168.32.140:8091
+         ip-address: 192.168.32.140:8091
          prefer-ip-address: true
        #  instance-id: 
