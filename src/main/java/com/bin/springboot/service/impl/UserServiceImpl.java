@@ -2,6 +2,7 @@ package com.bin.springboot.service.impl;
 
 import java.util.List;
 
+import com.bin.springboot.dao.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -16,7 +17,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bin.springboot.core.PageInfo;
 import com.bin.springboot.dao.UserDao;
-import com.bin.springboot.dao.entity.User;
 import com.bin.springboot.service.UserService;
 
 @Service

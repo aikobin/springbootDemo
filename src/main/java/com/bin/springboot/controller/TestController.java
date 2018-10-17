@@ -1,11 +1,11 @@
 package com.bin.springboot.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.bin.springboot.dao.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bin.springboot.core.PageInfo;
 import com.bin.springboot.core.ResBody;
-import com.bin.springboot.dao.entity.User;
 import com.bin.springboot.service.UserService;
 
 @RestController
