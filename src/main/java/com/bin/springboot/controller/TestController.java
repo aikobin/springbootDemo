@@ -3,18 +3,22 @@ package com.bin.springboot.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bin.springboot.dao.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bin.springboot.core.PageInfo;
@@ -46,6 +50,7 @@ public class TestController extends BaseController{
 	}
 
 	@RequestMapping("/findUserPage")
+	@PreAuthorize("hasAnyAuthority('test1Role')")
 	public ResBody findUserPage(User user, @Validated PageInfo pageInfo, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return getValidatedInfo(bindingResult);
@@ -54,26 +59,18 @@ public class TestController extends BaseController{
 	}
 
 	@RequestMapping("/removeUser")
-	public String removeUser(User user) {
+	public String removeUser(User user, HttpServletRequest req) {
+		req.getHeader("Authorization_");
 		log.info("zzpps");
 		log.error("sssqq");
 		userService.removeUser(user.getId());
 		return "success";
 	}
-
-	@RequestMapping(value = "/testDownload")
-	public ResponseEntity<InputStreamResource> testDownload(HttpServletResponse res) throws IOException {
-		String filePath = "C://work//output//1.mp4";
-		FileSystemResource file = new FileSystemResource(filePath);
-		HttpHeaders headers = new HttpHeaders();
-		headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-		headers.add("Content-Disposition", String.format("attachment; filename=\"%s\"", file.getFilename()));
-		headers.add("Pragma", "no-cache");
-		headers.add("Expires", "0");
-
-		return ResponseEntity.ok().headers(headers).contentLength(file.contentLength())
-				.contentType(MediaType.parseMediaType("application/octet-stream"))
-				.body(new InputStreamResource(file.getInputStream()));
+	@RequestMapping(value = "/userTest")
+	public String userTest() throws Exception{
+		throw new Exception("test");
+	//	return "success";
 	}
+
 
 }
